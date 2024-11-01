@@ -3,11 +3,11 @@ const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
-gulp.task('sass', function(){
-    return gulp.src('source/scss/**/*.scss/')
+gulp.task('sass', function() {
+    return gulp.src('source/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('build/css'));
-});
+    });
 
 gulp.task('imagemin', function(){
     return gulp.src('source/images/*', {encoding: false})
